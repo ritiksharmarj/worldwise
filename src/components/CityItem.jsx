@@ -22,7 +22,7 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = ({ city }) => {
-  const { cityName, emoji, date, id, position } = city;
+  const { cityName, emoji, date } = city;
 
   return (
     <li>
