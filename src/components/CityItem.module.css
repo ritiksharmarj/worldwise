@@ -21,7 +21,6 @@
 }
 
 .emoji {
-  font-size: 2.6rem;
   line-height: 1;
 }
 
@@ -36,12 +35,16 @@
 }
 
 .deleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 2rem;
   aspect-ratio: 1;
   border-radius: 50%;
   border: none;
   background-color: var(--color-dark--1);
   color: var(--color-light--2);
+  fill: var(--color-light--2);
   font-size: 1.6rem;
   font-weight: 400;
   cursor: pointer;
@@ -51,4 +54,5 @@
 .deleteBtn:hover {
   background-color: var(--color-brand--1);
   color: var(--color-dark--1);
+  fill: var(--color-dark--1);
 }
