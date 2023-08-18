@@ -1,4 +1,8 @@
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   color: inherit;
   text-transform: uppercase;
   padding: 0.8rem 1.6rem;
@@ -16,6 +20,7 @@
 }
 
 .back {
+  fill: var(--color-light--2);
   font-weight: 600;
   background: none;
   border: 1px solid currentColor;

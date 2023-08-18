@@ -9,15 +9,16 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = ({ city }) => {
-  const { cityName, emoji, date } = city;
+  const { cityName, emoji, date, id, position } = city;
 
   return (
     <li>
-      <Link className={styles.cityItem}>
+      <Link
+        className={styles.cityItem}
+        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
+      >
         <img
           src={`https://flagcdn.com/24x18/${emoji.toLowerCase()}.png`}
-          srcSet={`https://flagcdn.com/48x36/${emoji.toLowerCase()}.png 2x,
-    https://flagcdn.com/72x54/${emoji.toLowerCase()}.png 3x`}
           width='24'
           height='18'
           alt={emoji}
