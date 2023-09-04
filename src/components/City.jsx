@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import useCitiesContext from '../hooks/useCitiesContext';
+
 import styles from './City.module.css';
+import Spinner from './Spinner';
+import BackButton from './BackButton';
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en', {
@@ -9,15 +15,16 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const City = () => {
-  // TEMP DATA
-  const currentCity = {
-    cityName: 'Lisbon',
-    emoji: 'pt',
-    date: '2027-10-31T15:59:59.138Z',
-    notes: 'My favorite city so far!',
-  };
+  const { id } = useParams();
+  const { getCurrentCity, currentCity, isLoading } = useCitiesContext();
+
+  useEffect(() => {
+    getCurrentCity(id);
+  }, [id]);
 
   const { cityName, emoji, date, notes } = currentCity;
+
+  if (isLoading) return <Spinner />;
 
   return (
     <div className={styles.city}>
@@ -25,7 +32,7 @@ const City = () => {
         <h6>City name</h6>
         <h3>
           <img
-            src={`https://flagcdn.com/24x18/${emoji.toLowerCase()}.png`}
+            src={`https://flagcdn.com/24x18/${emoji?.toLowerCase()}.png`}
             width='24'
             height='18'
             alt={emoji}
@@ -57,7 +64,9 @@ const City = () => {
         </a>
       </div>
 
-      <div></div>
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 };

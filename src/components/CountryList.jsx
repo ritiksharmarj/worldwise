@@ -1,9 +1,13 @@
+import useCitiesContext from '../hooks/useCitiesContext';
+
 import styles from './CountryList.module.css';
 import Spinner from './Spinner';
 import Message from './Message';
 import CountryItem from './CountryItem';
 
-const CountryList = ({ cities, isLoading }) => {
+const CountryList = () => {
+  const { cities, isLoading } = useCitiesContext();
+
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
