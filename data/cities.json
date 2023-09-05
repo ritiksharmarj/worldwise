@@ -1,14 +1,14 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "pt",
+      "cityName": "New Delhi",
+      "country": "India",
+      "emoji": "in",
       "date": "2027-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
+        "lat": 28.5273273,
+        "lng": 77.1265844
       },
       "id": 73930385
     },
@@ -35,18 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "de",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443199
     }
   ]
 }
