@@ -1,4 +1,4 @@
-import useCitiesContext from '../hooks/useCitiesContext';
+import { useCitiesContext } from '../hooks/useCitiesContext';
 
 import styles from './CountryList.module.css';
 import Spinner from './Spinner';

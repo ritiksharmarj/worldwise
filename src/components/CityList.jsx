@@ -1,4 +1,4 @@
-import useCitiesContext from '../hooks/useCitiesContext';
+import { useCitiesContext } from '../hooks/useCitiesContext';
 
 import styles from './CityList.module.css';
 import CityItem from './CityItem';
