@@ -1,40 +1,16 @@
 {
   "cities": [
     {
-      "cityName": "Delhi",
-      "country": "India",
-      "emoji": "IN",
-      "date": "2023-10-13T10:11:21.174Z",
-      "notes": "Love",
+      "cityName": "Marston Montgomery",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "GB",
+      "date": "2023-10-13T19:18:35.930Z",
+      "notes": "",
       "position": {
-        "lat": "28.579697994029342",
-        "lng": "77.23388671875"
+        "lat": "52.93539665862318",
+        "lng": "-1.77978515625"
       },
-      "id": 98443201
-    },
-    {
-      "cityName": "Jaipur",
-      "country": "India",
-      "emoji": "IN",
-      "date": "2023-10-13T10:11:51.226Z",
-      "notes": "my city",
-      "position": {
-        "lat": "26.8730809659384",
-        "lng": "75.8331298828125"
-      },
-      "id": 98443202
-    },
-    {
-      "cityName": "Jampur",
-      "country": "Pakistan",
-      "emoji": "PK",
-      "date": "2023-10-13T10:12:10.313Z",
-      "notes": "neighbour",
-      "position": {
-        "lat": "29.49698759653577",
-        "lng": "70.66406250000001"
-      },
-      "id": 98443203
+      "id": 1
     }
   ]
 }

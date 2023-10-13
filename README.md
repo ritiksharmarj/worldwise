@@ -1,4 +1,4 @@
-## Topics -
+## Topics
 
 - React Router (Routing)
 - Link and NavLink
@@ -8,3 +8,7 @@
 - Programmatic Navigation with useNavigate Hook
 - Context API Patterns
 - Leaflet Library Interactive Maps
+- Geolocation API
+- CRUD Operations
+- Advanced State Management: Conext + useReducer
+- Authentication
