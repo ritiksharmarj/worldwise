@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-
 import { CitiesContext } from '../contexts/CitiesContext';
 
 export function useCitiesContext() {
