@@ -46,10 +46,62 @@ function CitiesContextProvider({ children }) {
     }
   }
 
+  /**
+   * Create new city
+   * @param {object} newCity new city data
+   */
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true);
+
+      const res = await fetch(`${import.meta.env.VITE_BASE_URL}/cities`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newCity),
+      });
+      const data = await res.json();
+
+      setCities((cities) => [...cities, data]);
+    } catch (error) {
+      alert('There was an error creating city.');
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  /**
+   * Delete city
+   * @param {number} id current city id
+   */
+  async function deleteCity(id) {
+    try {
+      setIsLoading(true);
+
+      await fetch(`${import.meta.env.VITE_BASE_URL}/cities/${id}`, {
+        method: 'DELETE',
+      });
+
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch (error) {
+      alert('There was an error deleting city.');
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     // 2 - Provide value to child components
     <CitiesContext.Provider
-      value={{ cities, isLoading, currentCity, getCurrentCity }}
+      value={{
+        cities,
+        isLoading,
+        currentCity,
+        getCurrentCity,
+        createCity,
+        deleteCity,
+      }}
     >
       {children}
     </CitiesContext.Provider>

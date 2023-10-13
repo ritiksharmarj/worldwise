@@ -10,9 +10,14 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = ({ city }) => {
-  const { currentCity } = useCitiesContext();
-
+  const { currentCity, deleteCity } = useCitiesContext();
   const { cityName, emoji, date, id, position } = city;
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+
+    deleteCity(id);
+  };
 
   return (
     <li>
@@ -30,7 +35,7 @@ const CityItem = ({ city }) => {
         />
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn}>
+        <button className={styles.deleteBtn} onClick={handleDelete}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='12'
