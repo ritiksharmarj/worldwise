@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from 'react';
+import { createContext, useCallback, useEffect, useReducer } from 'react';
 
 // 1 - Create a context
 const CitiesContext = createContext();
@@ -68,23 +68,28 @@ function CitiesContextProvider({ children }) {
    * Get the current city data
    * @param {number} id pass an ID of selected cities
    */
-  async function getCurrentCity(id) {
-    if (Number(id) === currentCity.id) return;
+  const getCurrentCity = useCallback(
+    async (id) => {
+      if (Number(id) === currentCity.id) return;
 
-    dispatch({ type: 'loading' });
+      dispatch({ type: 'loading' });
 
-    try {
-      const res = await fetch(`${import.meta.env.VITE_BASE_URL}/cities/${id}`);
-      const data = await res.json();
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_BASE_URL}/cities/${id}`
+        );
+        const data = await res.json();
 
-      dispatch({ type: 'getCurrentCity', payload: data });
-    } catch (error) {
-      dispatch({
-        type: 'rejected',
-        payload: 'There was an error loading the city.',
-      });
-    }
-  }
+        dispatch({ type: 'getCurrentCity', payload: data });
+      } catch (error) {
+        dispatch({
+          type: 'rejected',
+          payload: 'There was an error loading the city.',
+        });
+      }
+    },
+    [currentCity.id]
+  );
 
   /**
    * Create new city

@@ -12,3 +12,5 @@
 - CRUD Operations
 - Advanced State Management: Conext + useReducer
 - Authentication
+- Memoization
+- Optimize Bundle Size With Code Splitting

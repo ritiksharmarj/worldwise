@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Marston Montgomery",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "emoji": "GB",
-      "date": "2023-10-13T19:18:35.930Z",
-      "notes": "",
-      "position": {
-        "lat": "52.93539665862318",
-        "lng": "-1.77978515625"
-      },
-      "id": 1
-    },
-    {
       "cityName": "Delhi",
       "country": "India",
       "emoji": "IN",
@@ -23,6 +11,30 @@
         "lng": "77.10205078125001"
       },
       "id": 2
+    },
+    {
+      "cityName": "Muzaffargarh",
+      "country": "Pakistan",
+      "emoji": "PK",
+      "date": "2023-10-16T11:47:50.115Z",
+      "notes": "",
+      "position": {
+        "lat": "29.76437737516313",
+        "lng": "70.97167968750001"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Rajgarh",
+      "country": "India",
+      "emoji": "IN",
+      "date": "2023-10-16T15:16:54.017Z",
+      "notes": "",
+      "position": {
+        "lat": "27.254629577800088",
+        "lng": "76.5966796875"
+      },
+      "id": 4
     }
   ]
 }
